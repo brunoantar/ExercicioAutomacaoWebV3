@@ -1,30 +1,20 @@
 package stepDefinition;
 
-import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
-import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageInteractions.CheckoutInteractions;
 
 public class CheckoutSteps {
 
-    public static WebDriver browser;
-    CheckoutInteractions validarCheckout;
+    private WebDriver browser = Hooks.driver;
+    private CheckoutInteractions validarCheckout  = new CheckoutInteractions(browser);;
 
-    @Dado("que acesso do site Swag Labs")
-    public void queAcessoDoSiteSwagLabs() {
-        browser = Hooks.driver;
-        validarCheckout = new CheckoutInteractions(browser);
-        validarCheckout.acessarURL();
-    }
 
-    @Quando("seleciono dois produtos do site com o usuario {string} e senha {string}")
-    public void seleciono_dois_produtos_do_site(String login, String senha) {
-        validarCheckout.inserirUsuario(login)
-                .inserirSenha(senha)
-                .selecionarProduto()
+    @E("adiciono os produtos selecionados dentro do carrinho")
+    public void adiciono_o_produto_selecionado_dentro_do_carrinho() {
+        validarCheckout.selecionarProduto()
                 .selecionarProduto2()
                 .acessarCarrinho();
     }

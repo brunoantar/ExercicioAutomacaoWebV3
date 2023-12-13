@@ -7,8 +7,9 @@ Funcionalidade: validação preço total no checkout
 
   @VPTC1 @AutoCheckout
   Esquema do Cenário: validar preco total dos produtos no carrinho com usuário standard
-    Dado que acesso do site Swag Labs
-    Quando seleciono dois produtos do site com o usuario <usuario> e senha <senha>
+    Dado que acesso o site Swag Labs
+    Quando realizo o acesso com o usuario <usuario> e senha <senha>
+    E adiciono os produtos selecionados dentro do carrinho
     E informo o primeiro nome <primeiroNome> ultimo nome <ultimoNome> e codigo postal <codigoPostal>
     Então sou capaz de verificar no checkout o valor total deles
 
@@ -18,8 +19,9 @@ Funcionalidade: validação preço total no checkout
 
   @VPTC2 @AutoCheckout
   Esquema do Cenário: validar preco total dos produtos no carrinho com usuário visual
-    Dado que acesso do site Swag Labs
-    Quando seleciono dois produtos do site com o usuario <usuario> e senha <senha>
+    Dado que acesso o site Swag Labs
+    Quando realizo o acesso com o usuario <usuario> e senha <senha>
+    E adiciono os produtos selecionados dentro do carrinho
     E informo o primeiro nome <primeiroNome> ultimo nome <ultimoNome> e codigo postal <codigoPostal>
     Então sou capaz de verificar no checkout o valor total deles
 

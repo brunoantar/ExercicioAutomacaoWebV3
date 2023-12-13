@@ -7,8 +7,9 @@ Funcionalidade: validação preço no carrinho
 
   @VPC1 @AutoCarrinho
   Esquema do Cenário: validar produto no carrinho com usuário standard
-    Dado que sou cliente do site Swag Labs
-    Quando seleciono um produto do site com usuario <usuario> e senha <senha>
+    Dado que acesso o site Swag Labs
+    Quando realizo o acesso com o usuario <usuario> e senha <senha>
+    E adiciono o produto selecionado dentro do carrinho
     Então sou capaz de verificar o valor dele dentro do carrinho
 
     Exemplos:
@@ -17,8 +18,9 @@ Funcionalidade: validação preço no carrinho
 
   @VPC2 @AutoCarrinho
   Esquema do Cenário: validar produto no carrinho com usuário visual
-    Dado que sou cliente do site Swag Labs
-    Quando seleciono um produto do site com usuario <usuario> e senha <senha>
+    Dado que acesso o site Swag Labs
+    Quando realizo o acesso com o usuario <usuario> e senha <senha>
+    E adiciono o produto selecionado dentro do carrinho
     Então sou capaz de verificar o valor dele dentro do carrinho
 
     Exemplos:

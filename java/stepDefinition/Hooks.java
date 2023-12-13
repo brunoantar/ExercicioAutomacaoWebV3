@@ -35,7 +35,7 @@ public class Hooks {
         String reportName = "TelaDeLogin" + "-" + timestamp2.substring(0, 6) + "-" + timestamp2.substring(7, 11) + ".html";
         String screenshotPath = "TelaDeLogin" + "-" + timestamp2.substring(0, 6) + "-" + timestamp2.substring(7, 11) + ".png";
 
-        String folderPath = System.getProperty("user.dir") + "/" + folderName;
+        String folderPath = System.getProperty("user.dir") + "/allure-results/" + folderName;
         new File(folderPath).mkdir();
 
         File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
