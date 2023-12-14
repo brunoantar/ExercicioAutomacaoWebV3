@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/features"
         ,glue = {"stepDefinition"}
-        ,tags = "@VL2" //usando o Auto + nome da feature são executados os 2 CTs de uma vez
-        ,plugin = {"pretty", "html:target/cucumber-report.html","json:target/cucumber.json"}
+        ,tags = "@VPC1" //usando o Auto + nome da feature são executados os 2 CTs de uma vez
+        ,plugin = {"pretty", "html:reports/Relatório.html","json:reports/Relatório.json"}
 )
 public class RunnerTest {
 }

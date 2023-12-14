@@ -5,7 +5,7 @@ Funcionalidade: validação os acessos dos usuários
   Quero verificar os acessos dos usuários
   Para que consiga validar os produtos no checkout a mensagem de erro no login
 
-  @VL1 @AutoValidaUsuario
+  @VL1 @AutoValidaUsuarios
   Esquema do Cenário: Acessar com os usuários sem bloqueio na aplicação para validar o checkout
     Dado que acesso o site Swag Labs
     Quando realizo o acesso com o usuario <usuario> e senha <senha>
@@ -20,7 +20,7 @@ Funcionalidade: validação os acessos dos usuários
   |"error_user"               |"secret_sauce" |"Carlos"      |"Silva"     |"04544-110"   |
   |"visual_user"              |"secret_sauce" |"Lucas"       |"Souza"     |"04755-215"   |
 
-  @VL2 @AutoValidaUsuario
+  @VL2 @AutoValidaUsuarios
   Esquema do Cenário: Acessar com os usuários com bloqueio na aplicação para validar mensagem de erro
     Dado que acesso o site Swag Labs
     Quando realizo o acesso com o usuario <usuario> e senha <senha>

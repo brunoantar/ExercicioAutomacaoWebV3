@@ -3,7 +3,6 @@ package stepDefinition;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
 import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -35,8 +34,9 @@ public class Hooks {
         String reportName = "TelaDeLogin" + "-" + timestamp2.substring(0, 6) + "-" + timestamp2.substring(7, 11) + ".html";
         String screenshotPath = "TelaDeLogin" + "-" + timestamp2.substring(0, 6) + "-" + timestamp2.substring(7, 11) + ".png";
 
-        String folderPath = System.getProperty("user.dir") + "/allure-results/" + folderName;
+        String folderPath = System.getProperty("user.dir") + "/files-results/" + folderName;
         new File(folderPath).mkdir();
+
 
         File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
@@ -69,7 +69,6 @@ public class Hooks {
             e.printStackTrace();
         }
         return new byte[0];
-
     }
 
     @After
